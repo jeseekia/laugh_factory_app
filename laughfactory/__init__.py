@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , render_template
 
 def create_app():
     app = Flask(__name__)
@@ -10,8 +10,14 @@ def create_app():
     models.db.init_app(app)
 
     @app.route('/')
-    def hello():
-        return "Hello, it's Meme!"
+    def index():
+        return render_template('index.html')
+
+    # meme index route
+    @app.route('/memes')
+    def memes():
+        return 'These are the memes'
+
 
     from . import index
     app.register_blueprint(index.bp)

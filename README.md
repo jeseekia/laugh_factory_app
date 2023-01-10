@@ -5,9 +5,11 @@ SQLAlchemy
 
 ## Installing dependencies
 python3 -m venv venv
-. venv/scripts/activate
+source venv/scripts/activate
 pip install Flask
 pip install Flask-SQLalchemy
+pip install Flask-Migrate
+pip install psycopg2-binary
 
 ## Routes
 |Method	     |Path	            |Purpose|
