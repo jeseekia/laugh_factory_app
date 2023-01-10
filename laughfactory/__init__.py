@@ -13,6 +13,12 @@ def create_app():
     def hello():
         return "Hello, it's Meme!"
 
-    from . import meme
-    app.register_blueprint(meme.bp)
+    from . import index
+    app.register_blueprint(index.bp)
+    from . import login
+    app.register_blueprint(login.bp)
+    from . import signup
+    app.register_blueprint(signup.bp)
+    from . import upload
+    app.register_blueprint(upload.bp)
     return app
