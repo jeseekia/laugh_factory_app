@@ -3,6 +3,11 @@ python3
 Flask
 SQLAlchemy
 
+## Installing dependencies
+python3 -m venv venv
+. venv/scripts/activate
+pip install Flask
+pip install Flask-SQLalchemy
 
 ## Routes
 |Method	     |Path	            |Purpose|
