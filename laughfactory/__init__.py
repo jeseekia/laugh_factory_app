@@ -26,6 +26,8 @@ def create_app():
     app.register_blueprint(index.bp)
     from . import login
     app.register_blueprint(login.bp)
+    from . import loggedin
+    app.register_blueprint(loggedin.bp)
     from . import signup
     app.register_blueprint(signup.bp)
     from . import upload
