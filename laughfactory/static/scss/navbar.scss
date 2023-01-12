@@ -1,0 +1,41 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar_logo{
+    height: 5em;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-content: row;
+    // padding-left: 1.5rem;
+    // padding-right: 1.5rem;
+}
+
+li{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
+}
+
+a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    // color: red;
+    // #signup{
+    //     color:black
+    // }
+}
+
+#signup{
+    color: black;
+}
+
+#login{
+    color: white;
+}
