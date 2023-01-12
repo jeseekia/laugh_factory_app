@@ -30,4 +30,6 @@ def create_app():
     app.register_blueprint(signup.bp)
     from . import upload
     app.register_blueprint(upload.bp)
+    from . import error
+    app.register_blueprint(error.bp)
     return app
