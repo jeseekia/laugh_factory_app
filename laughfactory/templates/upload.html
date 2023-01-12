@@ -10,7 +10,7 @@
 <body>
     <nav id="navbar">
         <div id='navbar_logo_container'>
-            <a href="/"><img id="navbar_logo" src="./static/images/logo.jpg" alt="Laugh Factory Logo"></img></a>
+            <a href="/"><img id="navbar_logo" src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Laugh Factory Logo"></img></a>
         </div>
         <div id='navbar_links'>
             <ul id='ul'>

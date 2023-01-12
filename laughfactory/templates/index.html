@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laugh Factory</title>
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <nav id="navbar">
         <div id='navbar_logo_container'>
-            <a href="/"><img id="navbar_logo" src="./static/images/logo.jpg" alt="Laugh Factory Logo"></img></a>
+            <a href="/"><img id="navbar_logo" src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Laugh Factory Logo"></img></a>
         </div>
         <div id='navbar_links'>
             <ul id='ul'>
