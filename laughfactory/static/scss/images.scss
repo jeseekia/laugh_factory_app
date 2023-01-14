@@ -5,8 +5,12 @@
     align-items: center;
 }
 
-#error_img{
+#error-img{
     justify-content: center;
-    height: 600px;
+    height: 200px;
     width: auto;
+}
+#error-message{
+    color: black;
+    font-family: sans-serif;
 }
