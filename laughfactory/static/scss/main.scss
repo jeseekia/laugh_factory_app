@@ -1,0 +1,17 @@
+@import "./card.scss";
+
+
+.main-card{
+    @include card{
+        height: auto;
+        width: 35em;
+        padding-top: 5em;
+        padding-bottom: 10em;
+    }
+}
+
+.meme{
+    // max-width: ;
+    width: 100%;
+}
+

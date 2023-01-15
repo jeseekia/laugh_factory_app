@@ -48,10 +48,10 @@ a {
   align-content: center;
   align-items: center;
   justify-content: center;
-  padding: 50px;
   margin-top: 4em;
   width: 23em;
   height: 19em;
+  padding: 50px;
 }
 
 .card {
@@ -64,10 +64,10 @@ a {
   align-content: center;
   align-items: center;
   justify-content: center;
-  padding: 50px;
   margin-top: 4em;
   width: 23em;
   height: 27em;
+  padding: 50px;
 }
 
 .upload-card {
@@ -80,10 +80,10 @@ a {
   align-content: center;
   align-items: center;
   justify-content: center;
-  padding: 50px;
   margin-top: 4em;
   width: 25em;
   height: 26em;
+  padding: 50px;
 }
 
 #goback {
@@ -161,10 +161,10 @@ button {
   align-content: center;
   align-items: center;
   justify-content: center;
-  padding: 50px;
   margin-top: 4em;
   width: 35em;
   height: 30em;
+  padding: 50px;
 }
 
 #error-message {
@@ -173,6 +173,27 @@ button {
 
 h2 {
   font-family: sans-serif;
+}
+
+.main-card {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4em;
+  height: auto;
+  width: 35em;
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.meme {
+  width: 100%;
 }
 
 body {
