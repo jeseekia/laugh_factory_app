@@ -23,7 +23,7 @@ li{
     padding-right: 1rem; 
 }
 
-a{
+a, li{
     text-decoration: none;
     font-family: $font-style;
     font-size: 20px;
@@ -36,6 +36,6 @@ a{
     color: $accent-color2;
 }
 
-#login,#signup2{
+#login,#signup2, #loggedin{
     color: $accent-color1;
 }
