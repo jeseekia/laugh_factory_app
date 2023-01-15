@@ -1,12 +1,18 @@
 
 @import "./navbar.scss";
-@import "./card.scss";
 @import "./login.scss";
-@import "./images.scss";
+@import "./signup.scss";
+@import "./variables.scss";
+@import "./upload.scss";
+@import "./form.scss";
+@import "./error.scss";
 
-
-$main-color: #FFCE5C;
 
 body{
     background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4em;
 }
