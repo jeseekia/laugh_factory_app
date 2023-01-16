@@ -1,17 +1,32 @@
+
+# Laugh Factory Application
+
+An application where you can view funny memes. You can sign up for an account
+to be able to share your own memes, you can also comment and react to memes you think are funny.
+
+
 ## Technology 
-python3
+Python3
+
 Flask
+
 SQLAlchemy
+## Installation
 
-## Installing dependencies
-python3 -m venv venv
-source venv/scripts/activate
-pip install Flask
-pip install Flask-SQLAlchemy
-pip install Flask-Migrate
-pip install psycopg2-binary
 
+
+```bash
+  python3 -m venv venv 
+  source venv/scripts/activate 
+  pip install Flask 
+  pip install Flask-SQLAlchemy 
+  pip install Flask-Migrate 
+  pip install psycopg2-binary
+  flask run --reload
+```
+    
 ## Routes
+
 |Method	     |Path	            |Purpose|
 |------------|------------------|-----------------------------------------------------------|
 |GET	     |/	                |The Main page|
@@ -25,4 +40,15 @@ pip install psycopg2-binary
 |DELETE	     |/meme/:id	        |Delete a meme|
 
 
-# laugh_factory_app
+
+## Authors
+
+- [Ivelisse Mandato](https://www.github.com/imandato)
+- [Yekai Guan](https://www.github.com/chosenbyme)
+- [Anibal Hugo](https://www.github.com/ahugo93)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us!
+
