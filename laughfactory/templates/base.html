@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav id="navbar">
+        <div id='navbar_logo_container'>
+            <a href="/"><img id="navbar_logo" src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Laugh Factory Logo"></img></a>
+        </div>
+        <div id='navbar_links'>
+            <ul id='ul'>
+                {% if signup %}
+                <li id="signup" ><a  href="/">Home</a></li>
+                <li><a id="login" href="/login">Log In</a></li>
+                {% elif login %}
+                <li id="signup" ><a  href="/">Home</a></li>
+                <li><a id="signup2" href="/signup">Sign Up</a></li>
+                {% elif upload %}
+                <li id="signup" ><a  href="/">Home</a></li>
+                <li id="loggedin">Hey, Yekai!</li>
+                {% elif loggedin %}
+                <li id="upload" ><a  href="/upload">Upload A Meme</a></li>
+                <li id="loggedin">Hey, Yekai!</li>
+                {% else %}
+                <li id="signup" ><a  href="/signup">Sign Up</a></li>
+                <li><a id="login" href="/login">Log In</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <div class="container">{% block content %}{% endblock %}</div>
+</body>
+</html>

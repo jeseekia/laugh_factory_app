@@ -1,41 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up!</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <nav id="navbar">
-        <div id='navbar_logo_container'>
-            <a href="/"><img id="navbar_logo" src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Laugh Factory Logo"></img></a>
-        </div>
-        <div id='navbar_links'>
-            <ul id='ul'>
-                <li id="home" ><a  href="/">Home</a></li>
-                <li><a id="login" href="/login">Log In</a></li>
-            </ul>
-           
-        </div>
-    </nav>
-    <div class="main-container">
-        <div class="card">
-            <h1>Sign Up</h1>
-            <div class="callout">Share some laughs by making an account!</div>
-            <form action="POST">
-                <!-- <label for="fname" id="fname-label">First Name</label> -->
-                <input placeholder="FIRST NAME" type="text" name="fname" id="fname">
-                <!-- <label for="lname" id="lname-label">Last Name</label> -->
-                <input placeholder="LAST NAME"type="text" name="lname" id="lname">
-                <!-- <label for="email" id="email-label">Email</label> -->
-                <input placeholder="EMAIL"type="email" name="email" id="email">
-                <!-- <label for="password" id="password-label">Password</label> -->
-                <input placeholder="PASSWORD" type="password" name="password" id="password">
-                <button class="form-button">CREATE ACCOUNT</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Sign Up! {% endblock %} 
+{% block content %}
+
+<div class="card">
+    <h1>Sign Up</h1>
+    <div class="callout">Share some laughs by making an account!</div>
+    <form action="POST">
+        <!-- <label for="fname" id="fname-label">First Name</label> -->
+        <input placeholder="FIRST NAME" type="text" name="fname" id="fname">
+        <!-- <label for="lname" id="lname-label">Last Name</label> -->
+        <input placeholder="LAST NAME"type="text" name="lname" id="lname">
+        <!-- <label for="email" id="email-label">Email</label> -->
+        <input placeholder="EMAIL"type="email" name="email" id="email">
+        <!-- <label for="password" id="password-label">Password</label> -->
+        <input placeholder="PASSWORD" type="password" name="password" id="password">
+        <button class="form-button">CREATE ACCOUNT</button>
+    </form>
+</div>
+
+{% endblock %}
