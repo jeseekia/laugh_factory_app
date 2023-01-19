@@ -37,7 +37,7 @@ class Comment(db.Model):
 
 class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    date_created = db.Column(db.DateTime(timezone=True), server_default=func.now())
+    date_created = db.Column(db.DateTime(timezone=True), default=datetime.datetime.now().replace(microsecond=0))
     author = db.Column(db.Integer, db.ForeignKey(
         'user.id', ondelete="CASCADE"), nullable=False)
     post_id = db.Column(db.Integer, db.ForeignKey(
