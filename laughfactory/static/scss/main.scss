@@ -1,15 +1,4 @@
-@import "./card.scss";
 @import "./variables.scss";
-
-
-.main-card{
-    @include card{
-        height: auto;
-        width: 35em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-}
 
 .meme{
     width: 100%;
