@@ -1,14 +1,5 @@
-@import "./card.scss";
-
-.upload-card{
-    @include card{
-        width: 25em;
-        height: 26em;
-        padding: 50px;
-    }
-}
-
+@import "./variables.scss";
 
 #goback{
-    color: black;
+    color: $accent-color1;
 }

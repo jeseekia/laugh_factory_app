@@ -1,9 +1,0 @@
-@import "./card.scss";
-
-.card{
-    @include card{
-        width: 23em;
-        height: 27em;
-        padding: 50px;
-    }
-}
