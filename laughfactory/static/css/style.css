@@ -29,13 +29,15 @@ a, li {
   color: white;
   margin-top: 20px;
 }
-
-#signup, #home {
-  color: white;
+a:hover, li:hover {
+  color: black;
 }
 
 #login, #signup2, #loggedin {
   color: black;
+}
+#login:hover, #signup2:hover, #loggedin:hover {
+  color: white;
 }
 
 #goback {

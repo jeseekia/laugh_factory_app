@@ -30,12 +30,14 @@ a, li{
     font-weight: bolder;
     color:$accent-color2;
     margin-top: 20px;
-}
-
-#signup, #home{
-    color: $accent-color2;
+    &:hover{
+        color: $accent-color1;
+    }
 }
 
 #login,#signup2, #loggedin{
     color: $accent-color1;
+    &:hover{
+        color: $accent-color2;
+    }
 }
