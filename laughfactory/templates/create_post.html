@@ -4,7 +4,28 @@
     <h1 align="center">Make a Post</h1>
     
     <form method="POST">
-      <textarea name="text" id="text" class="form-control"></textarea>
+      <div class="form-group">
+        <input
+        type="url"
+        id="meme-url"
+        name="url"
+        class="form-control"
+        placeholder="Enter Meme URL"
+      />
+        <!-- <input
+          type="file"
+          id="upload"
+          name="file"
+          class="form-control"
+          placeholder="Upload from local PC"
+        /> -->
+        <input
+          type="text"
+          id="meme-text"
+          name="text"
+          class="form-control"
+          placeholder="Enter Description""
+        />
       <br />
       <div align="center">
         <button type="submit" class="btn btn-lg btn-primary">Post</button>
