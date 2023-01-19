@@ -7,6 +7,6 @@ bp = Blueprint(
 
 @bp.route('/')
 def signup():
-    return render_template('signup.html')
+    return render_template('signup.html', signup="signup.html")
 
 
