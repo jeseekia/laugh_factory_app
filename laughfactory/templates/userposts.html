@@ -9,24 +9,24 @@
         <div class="user-container">
           <a class="user" href="/posts/{{post.user.username}}">{{post.user.username}}</a>
         </div> 
-        <div>
-            {% if user.id == post.author %}
-            <div class="btn-group">
-              <button
-                type="button"
-                class="btn btn-sm btn-primary dropdown-toggle"
-                data-bs-toggle="dropdown"
-              ></button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="/delete-post/{{post.id}}" class="dropdown-item"
-                    >Delete</a
-                  >
-                </li>
-              </ul>
-            </div>
-            {% endif %}
-        </div>
+        
+          {% if user.id == post.author %}
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-sm btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+            ></button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/delete-post/{{post.id}}" class="dropdown-item"
+                  >Delete</a
+                >
+              </li>
+            </ul>
+          </div>
+          {% endif %}
+        
         </div>
         <!-- rendering url & text from related post starts here -->
         <img class="meme" src="{{post.url}}" alt="user's meme">

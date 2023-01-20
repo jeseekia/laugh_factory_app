@@ -153,6 +153,8 @@ img {
   justify-content: space-between;
   width: 90%;
   align-items: center;
+  align-content: center;
+  text-align: center;
   margin-bottom: 1em;
 }
 
@@ -180,6 +182,7 @@ img {
   background-color: #FFCE5C;
   border-color: #FFCE5C;
   margin-left: 0.5em;
+  display: block;
 }
 .dropdown-toggle:hover {
   background-color: #FFCE5C;
