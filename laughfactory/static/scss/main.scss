@@ -21,6 +21,7 @@ img{
     text-align: left;
     // margin-bottom: 1em;
     color: $accent-color1;
+    margin-right: 0.5em;
 }
 
 .comments{
@@ -49,23 +50,25 @@ img{
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-content: center;
     justify-content: flex-start;
     width: 90%;
     margin-top: 1em;
 }
 
-#caption-user{
-    font-weight: 500;
-}
+// .caption-user{
+//     font-weight: bol;
+// }
 
 .caption{
     font-family: $font-style;
-    font-size: 20px;
-    font-weight: 250;
+    font-size: 15px;
+    // font-weight: 250;
     text-align: left;
     // margin-bottom: 1em;
     color: $accent-color1;
     margin-left: 0.5em;
+    // margin-bottom: 1em;
 }
 
 .dropdown-toggle{
@@ -73,6 +76,7 @@ img{
     height: 2em;
     background-color: $main-color;
     border-color: $main-color;
+    margin-left: 0.5em;
     &:hover{
         background-color: $main-color;
         border-color: $main-color;
@@ -90,4 +94,62 @@ img{
         border-color: $main-color;
     }
     
+}
+
+.comments-container{
+    width: 100%;
+}
+
+#view-comments{
+    color: $accent-color1;
+    font-size: 15px;
+}
+
+.view-comments{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.comments-expanded{
+    width: 85%;
+}
+
+#no-comments{
+    font-weight: bold;
+}
+
+.createpost{
+    background-color: $card-color;
+}
+
+.timestamp-container{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#timestamp{
+    text-align: left;
+}
+
+.comment-button{
+    width: 7em;
+    height: 3em;
+    margin-left: 1em;
+}
+
+.comment-form{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-content: center;
+    align-items: center;
+}
+
+.comment-align{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
 }

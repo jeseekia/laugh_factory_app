@@ -31,25 +31,24 @@
         <!-- rendering url & text from related post starts here -->
         <img class="meme" src="{{post.url}}" alt="user's meme">
         <div class="caption-container">
-          <div id="caption-user" class="user">
+          <div class="user">
             {{post.user.username}}
           </div>
           <div class="caption"> 
             {{post.text}}
           </div>
         </div>
-        <div>
+        <div class="comments-container">
           <div class="collapse" id="comments-{{post.id}}">
             <div>
-              <div class="card-body" id="comments-expanded-{{post.id}}">
+              <div class="comments-expanded" id="comments-expanded-{{post.id}}">
                 {% for comment in post.comments %}
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between comment-align">
                   <div>
-                    <a href="/posts/{{comment.user.username}}"
-                      >{{comment.user.username}}</a
-                    >: {{comment.text}}
+                    <a class="user" href="/posts/{{comment.user.username}}">{{comment.user.username}}</a> 
+                    {{comment.text}}
                   </div>
-                  <div>
+                  <div class="comment-align">
                     <small class="text-muted"> {{comment.date_created}}</small>
                     {% if user.id == comment.author or user.id == post.author %}
                     <div class="btn-group">
@@ -76,17 +75,17 @@
             </div>
           </div>
           <!-- rendering comments from related post starts here -->
-          <p class="card-text">
+          <div class="view-comments">
             {% if post.comments|length > 0 %}
-            <a data-bs-toggle="collapse" href="#comments-{{post.id}}" role="button">
-              <small>View {{post.comments|length}} Comments</small>
+            <a id="view-comments" data-bs-toggle="collapse" href="#comments-{{post.id}}" role="button">
+              View {{post.comments|length}} Comments
             </a>
             {% else %}
             <div class="no-comment">No Comments</div>
             {% endif %}
-          </p>
+          </div>
           <form
-            class="input-group mb-3"
+            class="comment-form"
             method="POST"
             action="/create-comment/{{post.id}}"
           >
@@ -94,21 +93,23 @@
               type="text"
               id="text"
               name="text"
-              class="form-control"
+              
               placeholder="Comment something!"
             />
-            <button type="submit" class="btn btn-primary">Comment</button>
+            <button class="comment-button" type="submit">Comment</button>
           </form>
         </div>
-        <div class="card-footer text-muted">{{post.date_created}}</div>
+        <div class="timestamp-container">
+          <div id="timestamp" class="text-muted">{{post.date_created}}</div>
+        </div>
       </div>
       <br/> {% endfor %}
     </div>
     {% block footer %}
-    <div align="center">
+    <div>
       <a href="/create-post"
-        ><button type="button" class="btn btn-primary btn-lg">
-          Create a Post
+        ><button class="createpost">
+          Add your own Meme!
         </button></a>
     </div>
     {% endblock %} 
