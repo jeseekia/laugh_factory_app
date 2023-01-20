@@ -10,7 +10,7 @@ views = Blueprint("views", __name__)
 @views.route("/home")
 def home():
     posts = Post.query.all()
-    return render_template("home.html", user=current_user, posts=posts)
+    return render_template("home.html", user=current_user, posts=posts, home="home.html")
 
 
 @views.route("/create-post", methods=['GET', 'POST'])
@@ -28,7 +28,7 @@ def create_post():
             flash('Post created!', category='success')
             return redirect(url_for('views.home'))
 
-    return render_template('create_post.html', user=current_user)
+    return render_template('create_post.html', user=current_user, upload="create_post.html")
 
 
 @views.route("/delete-post/<id>")
@@ -58,7 +58,7 @@ def posts(username):
         return redirect(url_for('views.home'))
 
     posts = user.posts
-    return render_template("posts.html", user=current_user, posts=posts, username=username)
+    return render_template("posts.html", user=current_user, posts=posts, username=username, postpage="posts.html")
 
 
 @views.route("/create-comment/<post_id>", methods=['POST'])

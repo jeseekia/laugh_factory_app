@@ -23,19 +23,28 @@ li{
     padding-right: 1rem; 
 }
 
-a, li{
+a,li{
     text-decoration: none;
     font-family: $font-style;
     font-size: 20px;
     font-weight: bolder;
     color:$accent-color2;
     margin-top: 20px;
-    &:hover{
-        color: $accent-color1;
-    }
 }
 
-#login,#signup2, #loggedin{
+a:hover{
+    color: $accent-color1;
+}
+
+#name1{
+    color: $accent-color1;
+}
+
+#name2{
+    color: $accent-color2;
+}
+
+#login,#signup2, #upload, #logout{
     color: $accent-color1;
     &:hover{
         color: $accent-color2;
