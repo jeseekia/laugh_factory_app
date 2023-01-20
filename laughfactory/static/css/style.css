@@ -130,7 +130,7 @@ img {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  margin-bottom: 1em;
+  color: black;
 }
 
 .comments {
@@ -146,10 +146,58 @@ img {
   margin-top: 1em;
 }
 
-.user-container {
+.meme-card-header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.caption-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
   width: 90%;
+  margin-top: 1em;
+}
+
+#caption-user {
+  font-weight: 500;
+}
+
+.caption {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 250;
+  text-align: left;
+  color: black;
+  margin-left: 0.5em;
+}
+
+.dropdown-toggle {
+  width: 2em;
+  height: 2em;
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:hover {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:checked {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:active {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:focus {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
 }
 
 .card {

@@ -19,7 +19,8 @@ img{
     font-size: 20px;
     font-weight: bold;
     text-align: left;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
+    color: $accent-color1;
 }
 
 .comments{
@@ -35,8 +36,58 @@ img{
     margin-top: 1em;
 }
 
-.user-container{
-    display:flex;
+.meme-card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.caption-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
     width: 90%;
+    margin-top: 1em;
+}
+
+#caption-user{
+    font-weight: 500;
+}
+
+.caption{
+    font-family: $font-style;
+    font-size: 20px;
+    font-weight: 250;
+    text-align: left;
+    // margin-bottom: 1em;
+    color: $accent-color1;
+    margin-left: 0.5em;
+}
+
+.dropdown-toggle{
+    width: 2em; 
+    height: 2em;
+    background-color: $main-color;
+    border-color: $main-color;
+    &:hover{
+        background-color: $main-color;
+        border-color: $main-color;
+    }
+    &:checked{
+        background-color: $main-color;
+        border-color: $main-color;
+    }
+    &:active{
+        background-color: $main-color;
+        border-color: $main-color;
+    }
+    &:focus{
+        background-color: $main-color;
+        border-color: $main-color;
+    }
+    
 }
