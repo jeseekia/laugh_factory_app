@@ -29,14 +29,23 @@ a, li {
   color: white;
   margin-top: 20px;
 }
-a:hover, li:hover {
+
+a:hover {
   color: black;
 }
 
-#login, #signup2, #loggedin {
+#name1 {
   color: black;
 }
-#login:hover, #signup2:hover, #loggedin:hover {
+
+#name2 {
+  color: white;
+}
+
+#login, #signup2, #upload, #logout {
+  color: black;
+}
+#login:hover, #signup2:hover, #upload:hover, #logout:hover {
   color: white;
 }
 
@@ -224,7 +233,7 @@ img {
   font-weight: bold;
 }
 
-.createpost {
+.beige-button {
   background-color: beige;
 }
 
