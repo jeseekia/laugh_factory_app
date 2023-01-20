@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
 from flask_login import login_required, current_user
 from .models import Post, User, Comment, Like
-from . import db
+from . import models
 
 views = Blueprint("views", __name__)
 
@@ -23,8 +23,8 @@ def create_post():
             flash('Post cannot be empty', category='error')
         else:
             post = Post(url=url,text=text, author=current_user.id)
-            db.session.add(post)
-            db.session.commit()
+            models.db.session.add(post)
+            models.db.session.commit()
             flash('Post created!', category='success')
             return redirect(url_for('views.home'))
 
@@ -41,8 +41,8 @@ def delete_post(id):
     elif current_user.id != post.author:
         flash('You do not have permission to delete this post.', category='error')
     else:
-        db.session.delete(post)
-        db.session.commit()
+        models.db.session.delete(post)
+        models.db.session.commit()
         flash('Post deleted.', category='success')
 
     return redirect(url_for('views.home'))
@@ -73,8 +73,8 @@ def create_comment(post_id):
         if post:
             comment = Comment(
                 text=text, author=current_user.id, post_id=post_id)
-            db.session.add(comment)
-            db.session.commit()
+            models.db.session.add(comment)
+            models.db.session.commit()
         else:
             flash('Post does not exist.', category='error')
 
@@ -91,8 +91,8 @@ def delete_comment(comment_id):
     elif current_user.id != comment.author and current_user.id != comment.post.author:
         flash('You do not have permission to delete this comment.', category='error')
     else:
-        db.session.delete(comment)
-        db.session.commit()
+        models.db.session.delete(comment)
+        models.db.session.commit()
 
     return redirect(url_for('views.home'))
 
