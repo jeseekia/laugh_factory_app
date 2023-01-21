@@ -29,14 +29,23 @@ a, li {
   color: white;
   margin-top: 20px;
 }
-a:hover, li:hover {
+
+a:hover {
   color: black;
 }
 
-#login, #signup2, #loggedin {
+#name1 {
   color: black;
 }
-#login:hover, #signup2:hover, #loggedin:hover {
+
+#name2 {
+  color: white;
+}
+
+#login, #signup2, #upload, #logout {
+  color: black;
+}
+#login:hover, #signup2:hover, #upload:hover, #logout:hover {
   color: white;
 }
 
@@ -130,7 +139,8 @@ img {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  margin-bottom: 1em;
+  color: black;
+  margin-right: 0.5em;
 }
 
 .comments {
@@ -146,10 +156,116 @@ img {
   margin-top: 1em;
 }
 
-.user-container {
+.meme-card-header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.caption-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
   justify-content: flex-start;
   width: 90%;
+  margin-top: 1em;
+}
+
+.caption {
+  font-family: sans-serif;
+  font-size: 15px;
+  text-align: left;
+  color: black;
+  margin-left: 0.5em;
+}
+
+.dropdown-toggle {
+  width: 2em;
+  height: 2em;
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+  margin-left: 0.5em;
+  display: block;
+}
+.dropdown-toggle:hover {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:checked {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:active {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+.dropdown-toggle:focus {
+  background-color: #FFCE5C;
+  border-color: #FFCE5C;
+}
+
+.comments-container {
+  width: 100%;
+}
+
+#view-comments {
+  color: black;
+  font-size: 15px;
+}
+
+.view-comments {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.comments-expanded {
+  width: 85%;
+}
+
+#no-comments {
+  font-weight: bold;
+}
+
+.beige-button {
+  background-color: beige;
+}
+
+.timestamp-container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#timestamp {
+  text-align: left;
+}
+
+.comment-button {
+  width: 7em;
+  height: 3em;
+  margin-left: 1em;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-content: center;
+  align-items: center;
+}
+
+.comment-align {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
 
 .card {

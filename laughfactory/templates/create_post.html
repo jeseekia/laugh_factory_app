@@ -1,33 +1,20 @@
 {% extends "base.html" %} 
-{% block title %}Home{% endblock %} 
+{% block title %}Upload a Meme{% endblock %} 
 {% block content%}
-    <h1 align="center">Make a Post</h1>
-    
-    <form method="POST">
-      <div class="form-group">
-        <input
-        type="url"
-        id="meme-url"
-        name="url"
-        class="form-control"
-        placeholder="Enter Meme URL"
-      />
-        <input
-          type="text"
-          id="meme-text"
-          name="text"
-          class="form-control"
-          placeholder="Enter Description""
-        />
-      <br/>
-      <div align="center">
-        <button type="submit" class="btn btn-lg btn-primary">Post</button>
-      </div>
-    </form>
-    <br />
-    <div align="center">
-      <a href="/home"
-        ><button type="button" class="btn btn-lg btn-secondary">Back</button></a
-      >
-    </div>
+
+<div class="card">
+  <h1>Submit Memes</h1>
+  <div class="callout">Share some funny memes!</div>
+  <form method="POST">
+      <!-- <label for="name" id="name-label">Name</label> -->
+      <!-- <input placeholder="NAME" type="text" name="name" id="name"> -->
+      <!-- <label for="meme" id="meme-label">Meme</label> -->
+      <input placeholder="MEME URL" type="url" name="url" id="meme-url">
+      <!-- <label for="caption" id="caption-label">Caption</label> -->
+      <input placeholder="CAPTION" type="text" name="text" id="meme-text">
+      <button type="submit">SUBMIT YOUR MEME</button>
+      <a id="goback" href="/home">Go Back</a>
+  </form>
+</div> 
+
 {% endblock %}
