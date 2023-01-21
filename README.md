@@ -21,6 +21,9 @@ SQLAlchemy
   pip install Flask 
   pip install Flask-SQLAlchemy 
   pip install flask-login
+  pip install Flask-Migrate    
+  pip install psycopg2-binary     
+
   flask run --reload
 ```
     
