@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for, request, flash
-from . import db
-from .models import User
+from . import models
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -12,7 +11,7 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
 
-        user = User.query.filter_by(email=email).first()
+        user = models.User.query.filter_by(email=email).first()
         if user:
             if check_password_hash(user.password, password):
                 flash("Logged in!", category='success')
@@ -33,8 +32,8 @@ def sign_up():
         username = request.form.get("username")
         password = request.form.get("password")
 
-        email_exists = User.query.filter_by(email=email).first()
-        username_exists = User.query.filter_by(username=username).first()
+        email_exists = models.User.query.filter_by(email=email).first()
+        username_exists = models.User.query.filter_by(username=username).first()
 
         if email_exists:
             flash('Email is already in use.', category='error')
@@ -47,10 +46,10 @@ def sign_up():
         elif len(email) < 4:
             flash("Email is invalid.", category='error')
         else:
-            new_user = User(email=email, username=username, password=generate_password_hash(
+            new_user = models.User(email=email, username=username, password=generate_password_hash(
                 password, method='sha256'))
-            db.session.add(new_user)
-            db.session.commit()
+            models.db.session.add(new_user)
+            models.db.session.commit()
             login_user(new_user, remember=True)
             flash('User created!')
             return redirect(url_for('views.home'))
