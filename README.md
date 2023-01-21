@@ -17,7 +17,7 @@ SQLAlchemy
 
 ```bash
   python3 -m venv venv 
-  source venv/scripts/activate 
+  source venv/bin/activate 
   pip install Flask 
   pip install Flask-SQLAlchemy 
   pip install flask-login
