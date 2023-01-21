@@ -21,13 +21,33 @@
         </div>
         <div id='navbar_links'>
             <ul id='ul'>
-                <li><a id="login" href="/home">Home</a></li>
+                {% if signup %}
+                <li id="signup" ><a  href="/">Home</a></li>
+                <li><a id="login" href="/login">Log In</a></li>
+                {% elif login %}
+                <li id="signup" ><a  href="/">Home</a></li>
+                <li><a id="signup2" href="/signup">Sign Up</a></li>
+                {% elif postpage %}
+                <li id="signup" >{{username}}'s Posts</li>
+                <li><a id="login" href="/">Home</a></li>
+                {% elif upload and user.is_authenticated %}
+                <li id="signup" ><a  href="/">Home</a></li>
+                <li id="name1">Hey, {{user.username}}!</li>
+                {% elif user.is_authenticated and home %}
+                <li id="upload" ><a  href="/create-post">Upload A Meme</a></li>
+                <li id="name2">Hey, {{user.username}}!</li>
+                <li id="logout"><a href="/logout">Log Out</a></li>
+                {% else %}
+                <li id="signup" ><a  href="/signup">Sign Up</a></li>
+                <li><a id="login" href="/login">Log In</a></li>
+                {% endif %}
+                <!-- <li><a id="login" href="/home">Home</a></li>
                 {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="/logout">Logout</a>
                 {% else %}
                 <li id="signup" ><a href="/signup">Sign Up</a></li>
                 <li><a id="login" href="/login">Log In</a></li>
-                {% endif %}
+                {% endif %} -->
             </ul>
         </div>
     </nav>
